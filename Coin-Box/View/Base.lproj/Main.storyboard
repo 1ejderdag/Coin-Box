@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +26,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esu-Kp-cnK">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Esu-Kp-cnK">
                                         <rect key="frame" x="11.333333333333343" y="79" width="370.33333333333326" height="80"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0gu-HF-WMr">
@@ -65,6 +66,11 @@
                                             <constraint firstAttribute="trailing" secondItem="0gu-HF-WMr" secondAttribute="trailing" constant="10" id="S4f-Te-eJU"/>
                                             <constraint firstItem="0gu-HF-WMr" firstAttribute="top" secondItem="Esu-Kp-cnK" secondAttribute="top" id="aYD-3E-ee0"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -76,7 +82,7 @@
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8nn-Ck-ySk" secondAttribute="trailing" id="2IF-wV-kMC"/>
                             <constraint firstItem="8nn-Ck-ySk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="LAw-C3-WFA"/>
@@ -86,6 +92,11 @@
                             <constraint firstItem="jND-gP-GhR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mg9-Jr-bCg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currencyLabel" destination="jI5-N4-IQJ" id="3eb-yb-HNX"/>
+                        <outlet property="currencyPicker" destination="jND-gP-GhR" id="iNh-pA-bYx"/>
+                        <outlet property="priceLabel" destination="NAX-3r-kKc" id="aRK-uf-nV5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,14 +105,14 @@
     </scenes>
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.99099999666213989" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
